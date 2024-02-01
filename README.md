@@ -7,6 +7,3 @@
 5. set script to a keybind
 6. enjoy e-z.host.
 
-###
-Credit to https://github.com/c-um for making the original flameshot script for e-z.host
-
