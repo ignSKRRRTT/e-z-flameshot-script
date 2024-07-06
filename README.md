@@ -7,5 +7,3 @@
 5. set script to a keybind
 6. enjoy e-z.host.
 
-**If the e-z.sh script is extremely delayed when uploading try the alternative script. It uses httpie instead of curl.**
-
