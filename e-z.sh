@@ -4,7 +4,12 @@ auth="API KEY HERE."
 url="https://api.e-z.host/files"
 
 temp_file="/tmp/screenshot.png"
-flameshot gui -r > $temp_file
+
+if [[ "$1" == "--full" ]]; then
+        flameshot screen -r > $temp_file
+    else
+        flameshot gui -r > $temp_file
+fi
 
 if [[ $(file --mime-type -b $temp_file) != "image/png" ]]; then
     rm $temp_file
@@ -41,4 +46,3 @@ fi
 cat /tmp/upload.json | jq -r ".imageUrl" | xclip -sel c
 notify-send "Image URL copied to clipboard" -a "Flameshot" -i $temp_file
 rm $temp_file
-
